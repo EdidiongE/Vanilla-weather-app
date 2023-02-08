@@ -1,0 +1,120 @@
+.body {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 5px solid rgb(0, 52, 89, 0.2);
+  padding: 50px;
+  border-radius: 20px;
+}
+.nav {
+  padding: 10px;
+}
+.city-input {
+  border: 1px solid rgb(0, 52, 89, 0.2);
+  width: 220px;
+  height: 40px;
+  border-radius: 9px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+.search-form {
+  display: flex;
+}
+.submit-btn {
+  border: none;
+  color: #fff;
+  border-radius: 18px;
+  padding: 8px 16px;
+  margin-left: 20px;
+  background-color: #003459;
+}
+.currentlocation-btn {
+  border: none;
+  color: #fff;
+  border-radius: 18px;
+  padding: 8px 16px;
+  background-color: #003459;
+}
+.day-time {
+  font-size: 20px;
+  font-weight: 500;
+  color: #003459;
+}
+#city {
+  font-size: 45px;
+  font-weight: 700;
+  color: #003459;
+  padding-top: 20px;
+}
+.temperature-unit {
+  margin-top: 10px;
+  color: #003459;
+  font-weight: 700;
+}
+#cel {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px 3px;
+  margin: 0 8px;
+}
+#cel:hover {
+  background-color: rgb(0, 126, 167, 0.1);
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+#fer {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin: 0 2px;
+}
+#fer:hover {
+  background-color: rgb(0, 126, 167, 0.1);
+  cursor: pointer;
+  transition: ease-in-out 200ms;
+}
+.current-weather-icon {
+  font-size: 120px;
+  padding-top: -150px;
+  color: #007ea7;
+  padding-bottom: 20px;
+}
+.current-temperature {
+  font-size: 100px;
+  font-weight: 700;
+  color: #003459;
+  padding-top: -50px;
+}
+.highest-lowest-temperature {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #003459;
+  font-size: 25px;
+}
+.humidity {
+  color: #003459;
+}
+.wind {
+  color: #003459;
+}
+#unit {
+  color: #003459;
+}
+.current-weather {
+  font-weight: 700;
+  color: #003459;
+  font-size: 25px;
+}
+.future-weather {
+  color: #003459;
+  font-weight: 700;
+}
+.future-weather-icon {
+  font-size: 30px;
+  color: #007ea7;
+}
+.future-temperature {
+  color: #003459;
+  font-weight: 700;
+}
