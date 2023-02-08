@@ -118,3 +118,11 @@
   color: #003459;
   font-weight: 700;
 }
+.footer {
+  color: #003459;
+  padding: 20px;
+}
+.git-link {
+  padding: 1px;
+  color: #007ea7;
+}
