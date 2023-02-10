@@ -5,15 +5,14 @@
   --border: #e5ebef;
 }
 .back {
-  background-color: var(--body);
+  background-color: var(--border);
+  height: 100%;
 }
 .body {
   background-color: var(--body);
   width: 800px;
-  margin: 0 auto;
-  margin-top: 50px;
-  border: 5px solid var(--border);
-  padding: 30px;
+  margin: 20px auto;
+  padding: 50px;
   border-radius: 20px;
 }
 
@@ -169,6 +168,12 @@
   font-weight: 700;
   color: var(--text);
   font-size: 25px;
+}
+.lowest-temperature {
+  padding-left: 3px;
+}
+.highest-temperature {
+  padding-left: 3px;
 }
 .humidity {
   color: var(--text);

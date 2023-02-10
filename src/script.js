@@ -1,7 +1,5 @@
 //Toggle btn
 const chk = document.getElementById("chk");
-
-// function toggleBtn() {}
 chk.addEventListener("change", (event) => {
   if (event.currentTarget.checked) {
     var root = document.querySelector(":root");
@@ -11,10 +9,10 @@ chk.addEventListener("change", (event) => {
     var text = rootStyles.getPropertyValue("--text");
     var border = rootStyles.getPropertyValue("--border");
 
-    root.style.setProperty("--body", "#181818");
+    root.style.setProperty("--body", "#393939");
     root.style.setProperty("--text", "#fff");
-    root.style.setProperty("--icons", "#999");
-    root.style.setProperty("--border", "#777");
+    root.style.setProperty("--icons", "#777");
+    root.style.setProperty("--border", "#181818");
   } else {
     var root = document.querySelector(":root");
     var rootStyles = getComputedStyle(root);
