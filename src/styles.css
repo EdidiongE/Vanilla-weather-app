@@ -4,7 +4,9 @@
   --icons: #007ea7;
   --border: #e5ebef;
 }
-
+.back {
+  background-color: var(--body);
+}
 .body {
   background-color: var(--body);
   width: 800px;
@@ -21,6 +23,7 @@
   padding-top: -60px;
   padding-left: 650px;
 }
+
 .checkbox {
   opacity: 0;
   position: absolute;
@@ -80,19 +83,33 @@
   display: flex;
 }
 .submit-btn {
-  border: none;
+  border: 2px solid var(--text);
   color: var(--body);
   border-radius: 18px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   margin-left: 20px;
   background-color: var(--text);
 }
+.submit-btn:hover {
+  color: var(--text);
+  background-color: var(--body);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  border: 2px solid var(--text);
+}
 .currentlocation-btn {
-  border: none;
+  border: 2px solid var(--text);
   color: var(--body);
   border-radius: 18px;
-  padding: 8px 16px;
+  padding: 6px 14px;
   background-color: var(--text);
+}
+.currentlocation-btn:hover {
+  color: var(--text);
+  background-color: var(--body);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  border: 2px solid var(--text);
 }
 .day-time {
   font-size: 20px;
@@ -117,7 +134,8 @@
   margin: 0 8px;
 }
 #cel:hover {
-  background-color: var(--border);
+  color: var(--body);
+  background-color: var(--text);
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
@@ -128,7 +146,8 @@
   margin: 0 2px;
 }
 #fer:hover {
-  background-color: var(--border);
+  color: var(--body);
+  background-color: var(--text);
   cursor: pointer;
   transition: ease-in-out 200ms;
 }

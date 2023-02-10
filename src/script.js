@@ -1,3 +1,34 @@
+//Toggle btn
+const chk = document.getElementById("chk");
+
+// function toggleBtn() {}
+chk.addEventListener("change", (event) => {
+  if (event.currentTarget.checked) {
+    var root = document.querySelector(":root");
+    var rootStyles = getComputedStyle(root);
+    var body = rootStyles.getPropertyValue("--body");
+    var icons = rootStyles.getPropertyValue("--icons");
+    var text = rootStyles.getPropertyValue("--text");
+    var border = rootStyles.getPropertyValue("--border");
+
+    root.style.setProperty("--body", "#181818");
+    root.style.setProperty("--text", "#fff");
+    root.style.setProperty("--icons", "#999");
+    root.style.setProperty("--border", "#777");
+  } else {
+    var root = document.querySelector(":root");
+    var rootStyles = getComputedStyle(root);
+    var body = rootStyles.getPropertyValue("--body");
+    var icons = rootStyles.getPropertyValue("--icons");
+    var text = rootStyles.getPropertyValue("--text");
+    var border = rootStyles.getPropertyValue("--border");
+
+    root.style.setProperty("--body", "#fff");
+    root.style.setProperty("--text", "#003459");
+    root.style.setProperty("--icons", "#007ea7");
+    root.style.setProperty("--border", "#e5ebef");
+  }
+});
 //Time
 let weatherAppTime = document.querySelector("div.current-time");
 let weatherAppDay = document.querySelector("div.day");
