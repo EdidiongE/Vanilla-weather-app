@@ -69,7 +69,7 @@ function getCityTemprature(response) {
   tempNumb.innerHTML = `${temp}°`;
   let wind = Math.round(response.data.wind.speed);
   let windNumb = document.querySelector("div.wind");
-  windNumb.innerHTML = `Wind: ${wind} m/s`;
+  windNumb.innerHTML = `Wind: ${wind} Km/H`;
   let description = response.data.weather[0].description;
   let descriptionNumb = document.querySelector("div.current-weather");
   descriptionNumb.innerHTML = description;

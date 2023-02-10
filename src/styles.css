@@ -40,7 +40,7 @@
   position: relative;
   height: 26px;
   width: 50px;
-  transform: scale(1.5);
+  transform: scale(2);
 }
 
 .label .ball {
@@ -71,7 +71,7 @@
   padding: 10px;
 }
 .city-input {
-  border: 1px solid var(--border);
+  border: 1px solid white;
   width: 220px;
   height: 40px;
   border-radius: 9px;
@@ -116,6 +116,7 @@
   color: var(--text);
 }
 #city {
+  text-transform: capitalize;
   font-size: 45px;
   font-weight: 700;
   color: var(--text);
@@ -185,6 +186,7 @@
   color: var(--text);
 }
 .current-weather {
+  text-transform: capitalize;
   font-weight: 700;
   color: var(--text);
   font-size: 25px;
