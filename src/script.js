@@ -65,7 +65,8 @@ weatherAppDay.innerHTML = dayFunc();
 function weatherCity(position) {}
 
 function getCityTemprature(response) {
-  let temp = Math.round(response.data.main.temp);
+  celcuisTemprature = response.data.main.temp;
+  let temp = Math.round(celcuisTemprature);
   let tempNumb = document.querySelector("div.current-temperature");
   tempNumb.innerHTML = `${temp}°`;
   let wind = Math.round(response.data.wind.speed);
@@ -109,7 +110,9 @@ function getTemprature(response) {
   let city = response.data.name;
   let tempNumb = document.querySelector("#city");
   tempNumb.innerHTML = `${city}`;
-  let temp = Math.round(response.data.main.temp);
+  celcuisTemprature = response.data.main.temp;
+
+  let temp = Math.round(celcuisTemprature);
   let h1 = document.querySelector("div.current-temperature");
   h1.innerHTML = `${temp}°`;
   let wind = Math.round(response.data.wind.speed);
@@ -130,6 +133,7 @@ function getTemprature(response) {
   );
   highestTemperatureNumb.innerHTML = `${highestTemperature}°`;
 }
+
 function getLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -139,3 +143,28 @@ function getLocation(position) {
 
 let currentLocBtn = document.querySelector(".currentlocation-btn");
 currentLocBtn.addEventListener("click", currentLocInput);
+
+// Temprature conversion
+
+let celcuisTemprature = null;
+
+let celcuis = document.querySelector("#cel");
+let fahrenheit = document.querySelector("#fer");
+
+function celBtn(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("div.current-temperature");
+  let unit = document.querySelector("#unit");
+  currentTemp.innerHTML = Math.round(celcuisTemprature) + "°";
+  unit.innerHTML = "Celsius";
+}
+celcuis.addEventListener("click", celBtn);
+
+function ferBtn(event) {
+  event.preventDefault();
+  let currentTemp = document.querySelector("div.current-temperature");
+  let unit = document.querySelector("#unit");
+  currentTemp.innerHTML = Math.round(celcuisTemprature * 1.8 + 32) + "°";
+  unit.innerHTML = "Fahrenheit";
+}
+fahrenheit.addEventListener("click", ferBtn);
