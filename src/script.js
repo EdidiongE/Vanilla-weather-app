@@ -27,6 +27,7 @@ chk.addEventListener("change", (event) => {
     root.style.setProperty("--border", "#e5ebef");
   }
 });
+
 //Time
 let weatherAppTime = document.querySelector("div.current-time");
 let weatherAppDay = document.querySelector("div.day");
@@ -113,7 +114,7 @@ function getTemprature(response) {
   h1.innerHTML = `${temp}°`;
   let wind = Math.round(response.data.wind.speed);
   let windNumb = document.querySelector("div.wind");
-  windNumb.innerHTML = `Wind: ${wind} m/s`;
+  windNumb.innerHTML = `Wind: ${wind} Km/H`;
   let description = response.data.weather[0].description;
   let descriptionNumb = document.querySelector("div.current-weather");
   descriptionNumb.innerHTML = description;

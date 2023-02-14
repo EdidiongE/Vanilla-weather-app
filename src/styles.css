@@ -40,7 +40,7 @@
   position: relative;
   height: 26px;
   width: 50px;
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 .label .ball {
@@ -186,10 +186,12 @@
   color: var(--text);
 }
 .current-weather {
-  text-transform: capitalize;
   font-weight: 700;
   color: var(--text);
   font-size: 25px;
+}
+.current-weather::first-letter {
+  text-transform: capitalize;
 }
 .future-weather {
   color: var(--text);
