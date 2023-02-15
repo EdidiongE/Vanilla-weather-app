@@ -78,10 +78,12 @@ function getCityTemprature(response) {
   let humidity = response.data.main.humidity;
   let humidityNumb = document.querySelector("div.humidity");
   humidityNumb.innerHTML = `Humidity: ${humidity}%`;
-  let lowestTemperature = Math.round(response.data.main.temp_min);
+  lowestTemperatureConversion = response.data.main.temp_min;
+  let lowestTemperature = Math.round(lowestTemperatureConversion);
   let lowestTemperatureNumb = document.querySelector("div.lowest-temperature");
   lowestTemperatureNumb.innerHTML = `${lowestTemperature}°`;
-  let highestTemperature = Math.round(response.data.main.temp_max);
+  highestTemperatureConversion = response.data.main.temp_max;
+  let highestTemperature = Math.round(highestTemperatureConversion);
   let highestTemperatureNumb = document.querySelector(
     "div.highest-temperature"
   );
@@ -124,7 +126,8 @@ function getTemprature(response) {
   let humidity = response.data.main.humidity;
   let humidityNumb = document.querySelector("div.humidity");
   humidityNumb.innerHTML = `Humidity: ${humidity}%`;
-  let lowestTemperature = Math.round(response.data.main.temp_min);
+  lowestTemperatureConversion = response.data.main.temp_min;
+  let lowestTemperature = Math.round(lowestTemperatureConversion);
   let lowestTemperatureNumb = document.querySelector("div.lowest-temperature");
   lowestTemperatureNumb.innerHTML = `${lowestTemperature}°`;
   let highestTemperature = Math.round(response.data.main.temp_max);
@@ -145,14 +148,24 @@ let currentLocBtn = document.querySelector(".currentlocation-btn");
 currentLocBtn.addEventListener("click", currentLocInput);
 
 // Temprature conversion
-
 let celcuisTemprature = null;
+let lowestTemperatureConversion = null;
+let highestTemperatureConversion = null;
 
 let celcuis = document.querySelector("#cel");
 let fahrenheit = document.querySelector("#fer");
 
 function celBtn(event) {
   event.preventDefault();
+  let lowestTemperature = Math.round(lowestTemperatureConversion);
+  let lowestTemperatureNumb = document.querySelector("div.lowest-temperature");
+  lowestTemperatureNumb.innerHTML = `${lowestTemperature}°`;
+
+  let highestTemperature = Math.round(highestTemperatureConversion);
+  let highestTemperatureNumb = document.querySelector(
+    "div.highest-temperature"
+  );
+  highestTemperatureNumb.innerHTML = `${highestTemperature}°`;
   let currentTemp = document.querySelector("div.current-temperature");
   let unit = document.querySelector("#unit");
   currentTemp.innerHTML = Math.round(celcuisTemprature) + "°";
@@ -162,6 +175,14 @@ celcuis.addEventListener("click", celBtn);
 
 function ferBtn(event) {
   event.preventDefault();
+  let lowestTemperatureNumb = document.querySelector("div.lowest-temperature");
+  let lowestTemperature = Math.round(lowestTemperatureConversion * 1.8 + 32);
+  lowestTemperatureNumb.innerHTML = `${lowestTemperature}°`;
+  let highestTemperature = Math.round(highestTemperatureConversion * 1.8 + 32);
+  let highestTemperatureNumb = document.querySelector(
+    "div.highest-temperature"
+  );
+  highestTemperatureNumb.innerHTML = `${highestTemperature}°`;
   let currentTemp = document.querySelector("div.current-temperature");
   let unit = document.querySelector("#unit");
   currentTemp.innerHTML = Math.round(celcuisTemprature * 1.8 + 32) + "°";
