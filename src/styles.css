@@ -4,6 +4,7 @@
   --icons: #49484a;
   --border: #fce8d5;
   --hover: #49484a;
+  --lower: rgba(236, 110, 75, 0.6);
 }
 .back {
   background-color: var(--border);
@@ -13,7 +14,7 @@
   background-color: var(--body);
   width: 800px;
   margin: 20px auto;
-  padding: 50px;
+  padding: 45px 45px;
   border-radius: 20px;
 }
 
@@ -72,7 +73,7 @@
   padding: 10px;
 }
 .city-input {
-  border: 1px solid white;
+  border: 1px solid var(--border);
   width: 220px;
   height: 40px;
   border-radius: 9px;
@@ -179,6 +180,7 @@
 }
 .lowest-temperature {
   padding-left: 3px;
+  color: var(--lower);
 }
 .highest-temperature {
   padding-left: 3px;
@@ -203,6 +205,10 @@
 .future-forcast {
   padding: 10px 0;
 }
+.forcast-image {
+  scale: 0.75;
+  margin: -20px 0;
+}
 .future-weather {
   color: var(--text);
   font-weight: 700;
@@ -214,6 +220,9 @@
 .future-temperature {
   color: var(--text);
   font-weight: 700;
+}
+.weather-forcast-min {
+  color: var(--lower);
 }
 .footer {
   color: var(--text);
