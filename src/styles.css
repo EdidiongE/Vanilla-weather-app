@@ -200,6 +200,9 @@
 .current-weather::first-letter {
   text-transform: capitalize;
 }
+.future-forcast {
+  padding: 10px 0;
+}
 .future-weather {
   color: var(--text);
   font-weight: 700;
