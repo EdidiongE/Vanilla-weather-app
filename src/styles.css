@@ -1,8 +1,9 @@
 :root {
-  --text: #003459;
+  --text: #ec6e4c;
   --body: #fff;
-  --icons: #007ea7;
-  --border: #e5ebef;
+  --icons: #49484a;
+  --border: #fce8d5;
+  --hover: #49484a;
 }
 .back {
   background-color: var(--border);
@@ -60,11 +61,11 @@
 }
 
 .fa-moon {
-  color: var(--icons);
+  color: var(--hover);
 }
 
 .fa-sun {
-  color: var(--icons);
+  color: var(--hover);
 }
 
 .nav {
@@ -128,10 +129,12 @@
   font-weight: 700;
 }
 #cel {
+  position: absolute;
+  z-index: 2;
   border: 1px solid;
   border-radius: 5px;
-  padding: 3px 3px;
-  margin: 0 8px;
+  padding: 3px 5px;
+  margin-left: -35px;
 }
 #cel:hover {
   color: var(--body);
@@ -140,10 +143,12 @@
   transition: ease-in-out 200ms;
 }
 #fer {
+  position: absolute;
+  z-index: 2;
   border: 1px solid;
   border-radius: 5px;
   padding: 3px 6px;
-  margin: 0 2px;
+  margin: 0 4px;
 }
 #fer:hover {
   color: var(--body);
@@ -151,10 +156,12 @@
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
-.current-weather-icon {
-  font-size: 120px;
-  padding-top: -150px;
-  color: var(--icons);
+#current-weather-icon {
+  position: relative;
+  width: 100px;
+  z-index: 1;
+  scale: 1.5;
+  padding-top: 25px;
   padding-bottom: 20px;
 }
 .current-temperature {
@@ -211,5 +218,5 @@
 }
 .git-link {
   padding: 1px;
-  color: var(--icons);
+  color: var(--hover);
 }

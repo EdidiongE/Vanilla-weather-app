@@ -8,11 +8,13 @@ chk.addEventListener("change", (event) => {
     var icons = rootStyles.getPropertyValue("--icons");
     var text = rootStyles.getPropertyValue("--text");
     var border = rootStyles.getPropertyValue("--border");
+    var border = rootStyles.getPropertyValue("--hover");
 
     root.style.setProperty("--body", "#393939");
     root.style.setProperty("--text", "#fff");
     root.style.setProperty("--icons", "#777");
     root.style.setProperty("--border", "#181818");
+    root.style.setProperty("--hover", "#ec6e4c");
   } else {
     var root = document.querySelector(":root");
     var rootStyles = getComputedStyle(root);
@@ -20,11 +22,13 @@ chk.addEventListener("change", (event) => {
     var icons = rootStyles.getPropertyValue("--icons");
     var text = rootStyles.getPropertyValue("--text");
     var border = rootStyles.getPropertyValue("--border");
+    var border = rootStyles.getPropertyValue("--hover");
 
     root.style.setProperty("--body", "#fff");
-    root.style.setProperty("--text", "#003459");
-    root.style.setProperty("--icons", "#007ea7");
-    root.style.setProperty("--border", "#e5ebef");
+    root.style.setProperty("--text", "#EC6E4C");
+    root.style.setProperty("--icons", "#49484a");
+    root.style.setProperty("--border", "#fce8d5");
+    root.style.setProperty("--hover", "#49484a");
   }
 });
 
@@ -88,6 +92,13 @@ function getCityTemprature(response) {
     "div.highest-temperature"
   );
   highestTemperatureNumb.innerHTML = `${highestTemperature}°`;
+
+  let icon = response.data.weather[0].icon;
+  let iconPic = document.querySelector("#current-weather-icon");
+  iconPic.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
 
 function cityInput(event) {
@@ -160,7 +171,6 @@ function celBtn(event) {
   let lowestTemperature = Math.round(lowestTemperatureConversion);
   let lowestTemperatureNumb = document.querySelector("div.lowest-temperature");
   lowestTemperatureNumb.innerHTML = `${lowestTemperature}°`;
-
   let highestTemperature = Math.round(highestTemperatureConversion);
   let highestTemperatureNumb = document.querySelector(
     "div.highest-temperature"
