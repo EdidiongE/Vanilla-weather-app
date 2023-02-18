@@ -202,14 +202,15 @@
 .current-weather::first-letter {
   text-transform: capitalize;
 }
-.future-forcast {
+.future-forecast {
   padding: 10px 0;
 }
-.forcast-image {
+.forecast-image {
   scale: 0.75;
   margin: -20px 0;
 }
 .future-weather {
+  text-align: center;
   color: var(--text);
   font-weight: 700;
 }
@@ -220,11 +221,13 @@
 .future-temperature {
   color: var(--text);
   font-weight: 700;
+  text-align: center;
 }
 .weather-forcast-min {
   color: var(--lower);
 }
 .footer {
+  text-align: center;
   color: var(--text);
   padding: 20px;
 }
