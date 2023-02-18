@@ -65,7 +65,7 @@ weatherAppDay.innerHTML = dayFunc();
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let daysOfTheWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let daysOfTheWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   return daysOfTheWeek[day];
 }
 function futureForecast(response) {
